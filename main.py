@@ -41,4 +41,4 @@ else:
     for char in titelHashtag:# добавляю только те символы который не содержат знаки из string.punctuation
         if char not in string.punctuation:
             hashTag = hashTag + char
-print( "#" + hashTag.replace(" ", "")) # добавляю "#" в начало и удаляю пробелы
+print( "#" + hashTag.replace(" ", "")) # добавляю "#" в начало, и удаляю пробелы
