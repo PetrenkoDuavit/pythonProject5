@@ -30,15 +30,15 @@ for test_variable in test_data:
     print(len(test_variable))
     if len(test_variable) > 0:
         if test_variable in keyword.kwlist:
-            print(f"Error! Found {test_variable} 1111is keyword!")
-        elif not test_variable[0].isnumeric() and test_variable.count(" ") == 0:
+            print(f"Error! Found {test_variable} 1111is keyword!") # добавил 111 чтобы понимать какая срабатывает, я потом уберу
+        elif not test_variable[0].isnumeric() and test_variable.count(" ") == 0:# если сюда добавить  and test_variable.islower(), "_" не проходит эту проверку
             is_correct = True
             for symbol in string.punctuation.replace("_", ""):
                 if symbol in test_variable:
                     is_correct = False
                     print(f"Error! Found {test_variable} 2222in variable name!")
                     break
-        start_index = 0
+        start_index = 0 # цикл работает только если подряд идут нижние подчеркиввния
         while start_index < len(test_variable) - 1 :
             first_underscore_index = test_variable.find("_")
             if first_underscore_index != -1 and len(test_variable) >= 2:
@@ -52,7 +52,7 @@ for test_variable in test_data:
             else:
                 start_index = first_underscore_index + 1
 
-        if is_correct:
+        if is_correct:  # эта переменная почемуто не связана с остальными is_correct
                 print(f"Keyword {test_variable} is correct!")
         else:
             print(f"Error! Found {test_variable} in 4444variable name!")
