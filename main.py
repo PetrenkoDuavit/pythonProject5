@@ -38,7 +38,7 @@ for test_variable in test_data:
                     is_correct = False
                     print(f"Error! Found {test_variable} 2222in variable name!")
                     break
-        start_index = 0 # цикл работает только если подряд идут нижние подчеркиввния
+        start_index = 0 # цикл работает только если подряд идут нижние подчеркиввния, остальных случаях он будет безконечным,
         while start_index < len(test_variable) - 1 :
             first_underscore_index = test_variable.find("_")
             if first_underscore_index != -1 and len(test_variable) >= 2:
